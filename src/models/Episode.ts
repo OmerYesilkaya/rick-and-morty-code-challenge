@@ -1,3 +1,5 @@
+import { Info } from "./Info";
+
 export type Episode = {
 	id: number;
 	name: string;
@@ -6,4 +8,9 @@ export type Episode = {
 	characters: string[];
 	url: string;
 	created: Date;
+};
+
+export type AllEpisodesResponse = {
+	info: Info;
+	results: Episode[];
 };
