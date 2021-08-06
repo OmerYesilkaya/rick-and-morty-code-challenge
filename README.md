@@ -2,9 +2,10 @@
 
 A web application to view Rick and Morty episodes.
 
-#### Technologies used:
+#### Technologies/Libraries used:
 
 * React js
 * TypeScript
 * React Query
-* Tailwind CSS
+* Chakra UI
+* React-Router-Dom
