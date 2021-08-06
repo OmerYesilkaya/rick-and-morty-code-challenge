@@ -1,7 +1,13 @@
 export const BASE_URL = "https://rickandmortyapi.com/api";
 
+export const QUERY_TYPE = {
+	EPISODES: "episode",
+	LOCATIONS: "location",
+	CHARACTERS: "character",
+};
+
 export const API = {
-	EPISODES: BASE_URL + "/episodes",
-	LOCATIONS: BASE_URL + "/locations",
-	CHARACTERS: BASE_URL + "/characters",
+	EPISODES: BASE_URL + "/" + QUERY_TYPE.EPISODES,
+	LOCATIONS: BASE_URL + "/" + QUERY_TYPE.LOCATIONS,
+	CHARACTERS: BASE_URL + "/" + QUERY_TYPE.CHARACTERS,
 };
