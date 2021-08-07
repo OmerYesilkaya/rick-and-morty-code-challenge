@@ -1,4 +1,5 @@
 import { Gender } from "./Gender";
+import { Info } from "./Info";
 import { Location } from "./Location";
 import { Origin } from "./Origin";
 import { Status } from "./Status";
@@ -16,4 +17,9 @@ export type Character = {
 	episode: string[];
 	url: string;
 	created: Date;
+};
+
+export type AllCharactersResponse = {
+	info: Info;
+	results: Character[];
 };
