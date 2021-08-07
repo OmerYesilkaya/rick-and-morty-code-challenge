@@ -4,6 +4,8 @@ export const QUERY_TYPE = {
 	EPISODES: "episode",
 	LOCATIONS: "location",
 	CHARACTERS: "character",
+	EPISODE: "episodeDetails",
+	CHARACTER: "characterDetails",
 };
 
 export const API = {
