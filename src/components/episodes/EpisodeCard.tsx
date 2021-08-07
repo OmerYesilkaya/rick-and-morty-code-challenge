@@ -32,7 +32,7 @@ export default function EpisodeCard(props: EpisodeCardProps) {
 					{props.episode.episode}
 				</Text>
 				<Text>{props.episode.name}</Text>
-				<Text color="gray.500" fontFamily="Source Sans Pro" fontWeight="semibold" fontSize="md" fontStyle="italic">
+				<Text color="gray.500" fontFamily="Ubuntu" fontWeight="semibold" fontSize="md" fontStyle="italic">
 					{props.episode.air_date}
 				</Text>
 			</Flex>

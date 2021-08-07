@@ -1,5 +1,6 @@
 import { Flex } from "@chakra-ui/react";
 import EpisodeDetailContainer from "components/episodeDetails/EpisodeDetailContainer";
+import CharacterDetailContainer from "components/characterDetails/CharacterDetailContainer";
 import EpisodeContainer from "components/episodes/EpisodeContainer";
 import Footer from "components/Footer";
 import Navbar from "components/Navbar";
@@ -18,23 +19,23 @@ const queryClient = new QueryClient({
 function App() {
 	return (
 		<QueryClientProvider client={queryClient}>
-			<Flex direction="column" h="100vh" position="relative">
-				<Navbar />
-
-				<Router>
+			<Router>
+				<Flex direction="column" h="100vh" position="relative">
+					<Navbar />
 					<Switch>
 						<Route path="/episode/:id">
 							<EpisodeDetailContainer />
 						</Route>
-						<Route path="/character/:id">{/* Character Details */}</Route>
+						<Route path="/character/:id">
+							<CharacterDetailContainer />
+						</Route>
 						<Route path="/">
 							<EpisodeContainer />
 						</Route>
 					</Switch>
-				</Router>
-
-				<Footer />
-			</Flex>
+					<Footer />
+				</Flex>
+			</Router>
 		</QueryClientProvider>
 	);
 }
