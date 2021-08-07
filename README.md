@@ -1,9 +1,5 @@
 ## Bitexen React.js code challenge
 
-A web application to view Rick and Morty episodes.
-
-#### Idea
-
 Project is made up of 3 pages;
 * All episodes
 * Episode details
