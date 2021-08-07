@@ -1,4 +1,4 @@
-import { Center, Flex, Text } from "@chakra-ui/react";
+import { Center, Flex, Text, useMediaQuery } from "@chakra-ui/react";
 import { Episode } from "models/Episode";
 import { useHistory } from "react-router-dom";
 import { MdChevronRight } from "react-icons/md";
@@ -11,6 +11,7 @@ type EpisodeCardProps = {
 
 export default function EpisodeCard(props: EpisodeCardProps) {
 	const history = useHistory();
+	const [isSmallerThan1550px, isSmallerThan1200px] = useMediaQuery(["(max-width: 1550px)", "(max-width: 1200px)"]);
 
 	function handleOnClick(id: number) {
 		history.push(`/episode/${id}`);
@@ -31,10 +32,14 @@ export default function EpisodeCard(props: EpisodeCardProps) {
 				<Text mr="1em" color="gray.400">
 					{props.episode.episode}
 				</Text>
-				<Text>{props.episode.name}</Text>
-				<Text color="gray.500" fontFamily="Ubuntu" fontWeight="semibold" fontSize="md" fontStyle="italic">
-					{props.episode.air_date}
+				<Text>
+					{isSmallerThan1550px && props.episode.name.length > 20 ? props.episode.name.substring(0, 20) + "..." : props.episode.name}
 				</Text>
+				{!isSmallerThan1200px && (
+					<Text color="gray.500" fontFamily="Ubuntu" fontWeight="semibold" fontSize="md" fontStyle="italic">
+						{props.episode.air_date}
+					</Text>
+				)}
 			</Flex>
 
 			<Center ml="auto">

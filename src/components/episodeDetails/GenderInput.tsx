@@ -1,7 +1,5 @@
 import { Divider, Flex, Radio, RadioGroup, Text, VStack } from "@chakra-ui/react";
-import { MotionCenter } from "components/motion/MotionCenter";
 import { Gender } from "models/Gender";
-import { MdClear } from "react-icons/md";
 
 type GenderInputProps = {
 	gender: Gender | null;
@@ -49,7 +47,7 @@ export default function GenderInput({ gender, setGender }: GenderInputProps) {
 
 			<Divider />
 
-			<RadioGroup size="sm" fontWeight="light" onChange={(e) => handleSetValue(e)} value={gender?.toString()}>
+			<RadioGroup colorScheme="pink" size="sm" fontWeight="light" onChange={(e) => handleSetValue(e)} value={gender?.toString()}>
 				<VStack align="left" spacing={0}>
 					<Radio value={Gender.Female.toString()}>{Gender.Female}</Radio>
 					<Radio value={Gender.Male.toString()}>{Gender.Male}</Radio>

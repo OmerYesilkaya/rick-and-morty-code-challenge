@@ -1,7 +1,5 @@
 import { Divider, Flex, Radio, RadioGroup, Text, VStack } from "@chakra-ui/react";
-import { MotionCenter } from "components/motion/MotionCenter";
 import { Status } from "models/Status";
-import { MdClear } from "react-icons/md";
 
 type StatusInputProps = {
 	status: Status | null;
@@ -40,7 +38,7 @@ export default function StatusInput({ status, setStatus }: StatusInputProps) {
 
 			<Divider />
 
-			<RadioGroup size="sm" fontWeight="light" onChange={(e) => handleSetValue(e)} value={status?.toString()}>
+			<RadioGroup colorScheme="pink" size="sm" fontWeight="light" onChange={(e) => handleSetValue(e)} value={status?.toString()}>
 				<VStack align="left" spacing={0}>
 					<Radio value={Status.Alive.toString()}>{Status.Alive}</Radio>
 					<Radio value={Status.Dead.toString()}>{Status.Dead}</Radio>

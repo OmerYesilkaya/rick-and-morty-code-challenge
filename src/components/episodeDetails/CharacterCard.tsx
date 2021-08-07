@@ -67,7 +67,7 @@ export default function CharacterCard(props: CharacterCardProps) {
 				cursor="pointer"
 				onClick={() => handleCharacterClick(parseInt(props.charId))}
 			>
-				<Image src={data.image} onLoad={() => setIsLoaded(true)} />
+				<Image w="120px" objectFit="contain" src={data.image} onLoad={() => setIsLoaded(true)} />
 				<Flex direction="column" p="1em" w="100%">
 					<Text>{data.name.toUpperCase()}</Text>
 					<Grid fontFamily="Ubuntu" fontWeight="semibold" w="100%" templateColumns="1fr 1fr ">

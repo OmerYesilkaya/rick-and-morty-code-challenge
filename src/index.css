@@ -10,3 +10,7 @@
 	transition: 0.6s;
 	cursor: pointer;
 }
+
+* {
+	overscroll-behavior: false;
+}

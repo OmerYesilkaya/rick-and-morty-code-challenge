@@ -1,6 +1,7 @@
-import { Divider, Flex, Input, Text } from "@chakra-ui/react";
+import { Button, Divider, Flex, Input, Text, useDisclosure, useMediaQuery } from "@chakra-ui/react";
 import { Gender } from "models/Gender";
 import { Status } from "models/Status";
+import { FilterModal } from "./FilterModal";
 import GenderInput from "./GenderInput";
 import StatusInput from "./StatusInput";
 
@@ -42,7 +43,7 @@ export default function FilterCharacters({
 				<Input
 					size="sm"
 					mt="0.5em"
-					w="300px"
+					w="15vw"
 					placeholder="Search for a character name..."
 					value={name}
 					onChange={(e) => setName(e.target.value)}
@@ -56,7 +57,7 @@ export default function FilterCharacters({
 				<Input
 					size="sm"
 					mt="0.5em"
-					w="300px"
+					w="15vw"
 					placeholder="Search for species..."
 					value={species}
 					onChange={(e) => setSpecies(e.target.value)}
@@ -67,7 +68,7 @@ export default function FilterCharacters({
 					Type
 				</Text>
 				<Divider />
-				<Input size="sm" mt="0.5em" w="300px" placeholder="Search for a type..." value={type} onChange={(e) => setType(e.target.value)} />
+				<Input size="sm" mt="0.5em" w="15vw" placeholder="Search for a type..." value={type} onChange={(e) => setType(e.target.value)} />
 			</Flex>
 		</Flex>
 	);
