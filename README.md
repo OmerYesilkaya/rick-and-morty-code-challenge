@@ -1,4 +1,4 @@
-## Bitexen React.js code challenge
+## Rick and Morty Code Challenge
 
 Project is made up of 3 pages;
 * All episodes
